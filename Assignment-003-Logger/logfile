@@ -1,0 +1,6 @@
+Sat Mar  28 15:08:22 2020 [src/main.c: 13] LOG_INFO : Info Messange!
+Sat Mar  28 15:08:22 2020 [src/main.c: 14] LOG_WARN : Warn Message!
+Sat Mar  28 15:08:22 2020 [src/main.c: 15] LOG_ERROR: Error Message!
+Sat Mar  28 15:08:22 2020 [src/main.c: 13] LOG_INFO : Info Messange!
+Sat Mar  28 15:08:22 2020 [src/main.c: 14] LOG_WARN : Warn Message!
+Sat Mar  28 15:08:22 2020 [src/main.c: 15] LOG_ERROR: Error Message!
