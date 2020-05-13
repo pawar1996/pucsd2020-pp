@@ -1,0 +1,113 @@
+<!--p>edit works!</p-->
+
+<div class="main-panel">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+      <div class="container-fluid">
+        <div class="navbar-wrapper">
+          <a class="navbar-brand" >Edit User</a>
+        </div>
+        
+        <div class="collapse navbar-collapse justify-content-end">
+          <form class="navbar-form">
+            <div class="input-group no-border">
+              <input type="text" value="" class="form-control" placeholder="Search...">
+              <button type="submit" class="btn btn-white btn-round btn-just-icon" (click)="goToPage('filter-id')">
+               <p>go </p> 
+               
+              </button>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="container-fluid">
+        
+            <div class="card">
+              <div class="card-header card-header-primary">
+                <h4 class="card-title">Updated User Info</h4>
+                <p class="card-category">Edit User details</p>
+              </div>
+              <div class="card-body">
+
+                <div class="row">
+
+                  <!-- Form -->
+                  <div class="col-md-12">
+                      <!--h3>Add User</h3-->
+                      <form id="updateuser" name="updateuser" #updateuser="ngForm" (ngSubmit) = put(updateuser.value)>
+                        <div class="form-group">
+                          <label>id:</label>
+                          <input type="number" name = "id"  class="form-control" placeholder="id" #id="ngModel" ngModel>
+                          
+                        </div>
+                          <div class="form-group ">
+                              <label>First name</label>
+                              <input type="text" name="first_name" class="form-control" placeholder="first_name" #first_name="ngModel" ngModel>
+                            </div>
+                            <div class="form-group">
+                              <label>Last name</label>
+                              <input type="text" name="last_name" class="form-control" placeholder="last_name" #last_name="ngModel" ngModel>
+                            </div>
+                          <div class="form-group">
+                              <label>Email </label>
+                              <input type="text" name="email" class="form-control" placeholder="email" #email="ngModel" ngModel>
+                            </div>
+                          <div class="form-group">
+                              <label>Contact Number</label>
+                              <input type="text" name="contact_number" class="form-control" placeholder="contact_number" #contact_number="ngModel" ngModel>
+                            </div>
+                          <div class="form-group">
+                              <label>Password</label>
+                              <input type="text"  name="password" class="form-control" placeholder="password" #password="ngModel" ngModel>
+                            </div>
+                          
+                          <button type="submit" class="btn btn-primary btn-round pull-left" (click)="save()">Edit</button>
+                          <button type="reset" class="btn btn-primary  btn-round pull-right">Reset</button>
+                      </form>
+                  </div>
+          
+              </div>
+              </div>
+            </div>
+  
+      </div>
+     
+    </div>
+    
+
+    <!--div class="col-md-6 user-container">
+      
+      <form >
+        <div class="hidden">
+          <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+        </div>
+        <div class="form-group">
+          <label for="username">User Name:</label>
+          <input type="text" formControlName="username" placeholder="username" name="username" class="form-control" id="username" readonly="true">
+        </div>
+    
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+        </div>
+    
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+        </div>
+    
+    
+        <div class="form-group">
+          <label for="salary">Salary:</label>
+          <input type="number" formControlName="salary" placeholder="salary" name="salary" class="form-control" id="salary">
+        </div>
+    
+        <button class="btn btn-success">Update</button>
+      </form>
+    </div-->
+
+
+</div>

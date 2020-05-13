@@ -1,0 +1,98 @@
+<!--p>filter-id works!</p-->
+
+
+<body class="">
+    <div class="wrapper ">
+<div class="main-panel">
+    
+    <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+      <div class="container-fluid">
+        <div class="navbar-wrapper">
+          <a class="navbar-brand" >User Details</a>
+        </div>
+        
+          <div class="collapse navbar-collapse justify-content-end">
+           <form class="navbar-form">
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Filter By Id..." (keyup)=id($event)>
+                <button type="submit" class="btn btn-white btn-round btn-just-icon" (click)="getbyid()">
+                  <p>go</p>
+                </button>
+              </div>
+           </form>
+          
+          </div>
+      </div>
+    </nav>
+
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="card-body">
+          
+            
+            <div class ="row">
+                <div class="col-md-7">
+              
+                 <div class="card ">
+                    <div class="card-header card-header-info card-header-icon">
+                     <div class="card-icon">
+                      <img src={{imageUrl}}/>
+                     </div>
+                    </div>
+
+                    <div class="card-body">
+                        
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">Id:</label>
+                                    <!--input type="text" class="form-control" disabled-->
+                                   {{item?.id}}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">Name: </label>
+                                    {{item?.first_name}} {{item?.last_name}}
+                                </div>
+                            </div>
+                        </div>
+                         
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">Contact: </label>
+                                    {{item?.contact_number}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">Email: </label>
+                                    {{item?.email}}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="javascript:;" class="btn btn-primary btn-round pull-left" (click)="goToPage('edit')">Edit</a>
+                        <a href="javascript:;" class="btn btn-primary btn-round pull-right" (click)="delete()" >Delete</a>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+</div>
+</div>
+
+  

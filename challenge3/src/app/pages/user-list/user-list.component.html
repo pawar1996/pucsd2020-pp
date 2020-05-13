@@ -1,0 +1,99 @@
+<!--p>user-list works!</p-->
+<body class="">
+    <div class="wrapper ">
+      <div class="sidebar" data-color="purple" data-background-color="white">
+        
+        <div class="logo"><a class="simple-text logo-normal">
+            User Details
+          </a></div>
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li class="nav-item  ">
+              <a class="nav-link" href="/">
+                
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/newuser">
+                
+                <p>New User</p>
+              </a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link" href="/user-list">
+                
+                <p>User List</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/action">
+                
+                <p>Action</p>
+              </a>
+            </li>
+                     
+          </ul>
+        </div>
+      </div>
+      <div class="main-panel">
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+            <div class="container-fluid">
+              <div class="navbar-wrapper">
+                <a class="navbar-brand" >User List</a>
+              </div>
+              
+              <div class="collapse navbar-collapse justify-content-end">
+                <form class="navbar-form">
+                  <div class="input-group no-border">
+                    <input type="text" value="" class="form-control" placeholder="Filter By Id...">
+                    <button type="submit" class="btn btn-white btn-round btn-just-icon" (click)="goToPage('filter-id')">
+                      <p>go</p>
+                    </button>
+                  </div>
+                </form>
+                
+              </div>
+            </div>
+          </nav>
+
+          <div class="content">
+            <div class="container-fluid">  
+        <button id="all" type="submit" class="btn btn-primary" (click)=getall() >Show</button>
+
+
+<div *ngIf="byid==false">
+    <div class="card-columns" >
+        
+        <div class="card card-stats" *ngFor="let user of users">
+            <!--div class="card card-stats"-->
+                <div class="card-header card-header-info card-header-icon">
+                  <div class="card-icon">
+                    <img src="../assets/img/new_logo.png">
+                  </div>
+                </div>
+            <div  class="card-body" >
+                <p>Id:  {{user.id}}</p>
+                <p>Name:{{user.first_name}}
+                   {{user.last_name}}</p>
+                <p>{{user.email}}</p>
+                <p>{{user.contact_number}}</p>
+                 
+                <a href="javascript:;" class="btn btn-primary btn-round pull-left" (click)="goToPage('edit')">Edit</a>
+                <a href="javascript:;" class="btn btn-primary btn-round pull-right" (click)="delete()" >Delete</a>
+                   
+                <!--a [routerLink]="['edit', user.id]" class="btn btn-primary">Edit</a>
+                <a [routerLink]="" class="btn btn-primary">Delete</a-->
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
