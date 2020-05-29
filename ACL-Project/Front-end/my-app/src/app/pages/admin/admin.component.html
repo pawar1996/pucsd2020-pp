@@ -1,0 +1,153 @@
+<!--p>admin works!</p-->
+
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" >
+     
+      <div class="logo"><a  class="simple-text logo-normal">
+        Access - Control - List
+        </a></div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item  active ">
+            <a class="nav-link" href="/portal">
+              <i class="material-icons">dashboard</i>
+              <p>dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item  ">
+            <a class="nav-link" href="/profile">
+              <i class="material-icons">edit</i>
+              <p>my profile</p>
+            </a>
+          </li>
+          
+         
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand"><b><u>User Portal</u></b></a>
+          </div>
+          
+          <div class="collapse navbar-collapse justify-content-end">
+             
+              <!--a href="javascript:;" class="btn btn-warning btn-round pull-right" (click)="goToPage('login')">
+                <i class="material-icons">logout</i> logout</a-->
+                <form class="navbar-form">
+                  <div class="input-group no-border">
+                    <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="material-icons">person</i>
+                      <p class="d-lg-none d-md-block">
+                        Account
+                      </p>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                      <a class="dropdown-item button-container" href="#"><mat-icon>person</mat-icon> Profile</a>
+                      <a class="dropdown-item button-container" href="#"><mat-icon>settings</mat-icon> Settings</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item button-container" href="#" (click)="goToPage('login')"><mat-icon>logout</mat-icon> Log out</a>
+                    </div>
+                  </li>
+                </ul>
+                  </div>
+                </form>
+
+              
+            
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+         
+          
+          <div class="row">
+            
+            <div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-info">
+                  <h4 class="card-title">
+                    <div class="row">
+                      <div class = "col">
+                    <button id="my" type="submit" class="btn btn-info pull-right" (click)=getmyres() ><i class="material-icons">folder</i> My Files/Folders</button>
+                    <p class="card-category">View My Files and Folders</p>
+                      </div>
+                      <div class = "col">
+                        <button id="my" type="submit" class="btn btn-info pull-right" (click)=getmygrp() ><i class="material-icons">group</i> My Groups</button>
+                        <p class="card-category">View My Groups</p>    
+                      </div>
+                    </div>
+                  </h4>
+                  
+                </div>
+                <div class="card-body table-responsive">
+
+
+                  <table class="table table-hover" *ngIf="resources">
+                    <thead class="text-info" >
+                      <th>Resource ID</th>
+                      <th>Resource name</th>
+                      <th>Resource type</th>
+                      <th>path</th>
+                      <th>permission</th>
+                      <th></th>
+                    </thead>
+                    <tbody *ngFor= "let res of item">
+                      <tr>
+                        <td>{{res.rid}}</td>
+                        <td>{{res.rname}} </td>
+                        <td>{{res.rtype}}</td>
+                        <td>{{res.rpath}}</td>
+                        <td>{{res.rpermission}}</td>
+                        <td>
+                         
+                      </tr>
+                      
+                      
+                  </table>
+                  <table class="table table-hover" *ngIf="groups">
+                    <thead class="text-info" >
+                      <th>ID</th>
+                      <th>Name</th>
+                      <th>no of members</th>
+                     
+                    </thead>
+                    <tbody >
+                      <tr>
+                        <td>1</td>
+                        <td>{{rname}} </td>
+                        <td>{{per}}</td>
+                        
+                        <td>
+                        <button id="see_per"  class="btn btn-round btn-primary "   ><a class="material-icons">touch_app</a></button>
+                        
+                        </td>
+                      </tr>
+                      
+                      
+                  </table>
+                </div>
+              </div>
+              </div>
+                         
+          </div>
+          
+
+
+<!-- <button id="all" type="submit" class="btn btn-primary" (click)=getall() >All available Resources</button> -->
+
+<br>
+
+
+        </div>
+      </div>
+      

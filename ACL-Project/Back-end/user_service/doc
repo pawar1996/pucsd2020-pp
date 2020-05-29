@@ -1,0 +1,5 @@
+create user and he able to create file in given folder location
+ - setup database
+ - write api to accept post for create file or folder
+ - right a code for create file in system
+ - validate user permition before creating file`
